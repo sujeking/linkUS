@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		187F40811D55C3B8005D0757 /* MEMsgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F407F1D55C3B8005D0757 /* MEMsgViewController.swift */; };
+		187F40821D55C3B8005D0757 /* MEMsgViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187F40801D55C3B8005D0757 /* MEMsgViewController.xib */; };
+		187F40841D55C3D2005D0757 /* MEMsgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F40831D55C3D2005D0757 /* MEMsgModel.swift */; };
+		187F40861D55C3E2005D0757 /* MEMsgViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F40851D55C3E2005D0757 /* MEMsgViewModel.swift */; };
 		754358971D53A60100DF4CFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754358961D53A60100DF4CFC /* AppDelegate.swift */; };
 		754358991D53A60100DF4CFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754358981D53A60100DF4CFC /* ViewController.swift */; };
 		7543589C1D53A60100DF4CFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7543589A1D53A60100DF4CFC /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		187F407F1D55C3B8005D0757 /* MEMsgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MEMsgViewController.swift; sourceTree = "<group>"; };
+		187F40801D55C3B8005D0757 /* MEMsgViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEMsgViewController.xib; sourceTree = "<group>"; };
+		187F40831D55C3D2005D0757 /* MEMsgModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MEMsgModel.swift; sourceTree = "<group>"; };
+		187F40851D55C3E2005D0757 /* MEMsgViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MEMsgViewModel.swift; sourceTree = "<group>"; };
 		754358931D53A60100DF4CFC /* linkUS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = linkUS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		754358961D53A60100DF4CFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		754358981D53A60100DF4CFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +154,8 @@
 		754358B21D53A63B00DF4CFC /* MEMsgModule */ = {
 			isa = PBXGroup;
 			children = (
+				187F407F1D55C3B8005D0757 /* MEMsgViewController.swift */,
+				187F40801D55C3B8005D0757 /* MEMsgViewController.xib */,
 				754358B31D53A63B00DF4CFC /* Models */,
 				754358B41D53A63B00DF4CFC /* ViewModel */,
 				754358B51D53A63B00DF4CFC /* Views */,
@@ -156,6 +166,7 @@
 		754358B31D53A63B00DF4CFC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				187F40831D55C3D2005D0757 /* MEMsgModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,6 +174,7 @@
 		754358B41D53A63B00DF4CFC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				187F40851D55C3E2005D0757 /* MEMsgViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -298,6 +310,7 @@
 				754358BF1D53A63B00DF4CFC /* MELoginViewController.xib in Resources */,
 				754358A11D53A60100DF4CFC /* LaunchScreen.storyboard in Resources */,
 				7543589E1D53A60100DF4CFC /* Assets.xcassets in Resources */,
+				187F40821D55C3B8005D0757 /* MEMsgViewController.xib in Resources */,
 				7543589C1D53A60100DF4CFC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,7 +324,10 @@
 			files = (
 				754358C11D53A71000DF4CFC /* MELoginViewModel.swift in Sources */,
 				754358BE1D53A63B00DF4CFC /* MELoginViewController.swift in Sources */,
+				187F40811D55C3B8005D0757 /* MEMsgViewController.swift in Sources */,
 				754358991D53A60100DF4CFC /* ViewController.swift in Sources */,
+				187F40861D55C3E2005D0757 /* MEMsgViewModel.swift in Sources */,
+				187F40841D55C3D2005D0757 /* MEMsgModel.swift in Sources */,
 				754358971D53A60100DF4CFC /* AppDelegate.swift in Sources */,
 				754358C31D53A75800DF4CFC /* MEUserModel.swift in Sources */,
 			);
@@ -463,6 +479,7 @@
 				754358A71D53A60100DF4CFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
