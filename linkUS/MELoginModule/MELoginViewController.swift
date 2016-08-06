@@ -18,7 +18,7 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
     var lineLayerPass: CALayer!
     var lineLayerTransfer: CAShapeLayer!
     var userModel: MEUserModel!
-    
+    let lineColor:CGColor = UIColor.whiteColor().CGColor
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,10 +51,12 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
         
         
         self.loginButton.layer.borderWidth = 0
-        self.loginButton.layer.borderColor = UIColor.redColor().CGColor
+        self.loginButton.layer.borderColor = self.lineColor
         self.loginButton.layer.cornerRadius = 5
         self.loginButton.layer.masksToBounds = true
     }
+    
+//    MARK: - UITextFieldDelegate
     
     func textFieldDidBeginEditing(textField: UITextField) {
         if textField.isEqual(self.userNameTextField) {
@@ -78,7 +80,6 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
         return true
     }
     
-    
     func transferPath() -> UIBezierPath{
         let transferPath = UIBezierPath()
         transferPath.moveToPoint(CGPointMake(0, 0))
@@ -94,7 +95,7 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
         let y: CGFloat     = CGRectGetMaxY(self.userNameTextField.frame) + 5
         let height: CGFloat = 1.0
         lineLayerName.frame = CGRectMake(x, y, 0, height)
-        lineLayerName.backgroundColor = UIColor(red: 102/255.0, green: 102/255.0, blue: 102/255.0, alpha: 1).CGColor
+        lineLayerName.backgroundColor = self.lineColor
     }
     
     func layerPass() {
@@ -103,7 +104,7 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
         let y: CGFloat     = CGRectGetMaxY(self.passwordTextField.frame) + 5
         let height: CGFloat = 1.0
         lineLayerPass.frame = CGRectMake(x, y, 0, height)
-        lineLayerPass.backgroundColor = UIColor(red: 102/255.0, green: 102/255.0, blue: 102/255.0, alpha: 1).CGColor
+        lineLayerPass.backgroundColor = self.lineColor
     }
     
     func layerTransfer() {
@@ -111,14 +112,13 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
         let x: CGFloat     = CGRectGetMaxX(self.passwordTextField.frame)
         let y: CGFloat     = CGRectGetMaxY(self.userNameTextField.frame) + 6
         lineLayerTransfer.frame = CGRectMake(x, y, 30, 55)
-        lineLayerTransfer.strokeColor = UIColor(red: 102/255.0, green: 102/255.0, blue: 102/255.0, alpha: 1).CGColor
+        lineLayerTransfer.strokeColor = self.lineColor
         lineLayerTransfer.fillColor = nil
         lineLayerTransfer.path = self.transferPath().CGPath
         lineLayerTransfer.strokeEnd = 0
     }
     
-    
-//    过度动画
+//    MARK: - 过度动画
     
     func showTransLayerAnimation() {
         CATransaction.begin()
@@ -144,7 +144,7 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
         CATransaction.commit()
     }
     
-//    用户名动画
+//    MARK: - 用户名动画
     
     func showNameLayerAnimation() {
         var rect = self.lineLayerName.frame
@@ -181,7 +181,7 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
         CATransaction.commit()
     }
     
-//    密码动画
+//    MARK: - 密码动画
     func showPassLayerAnimation() {
         var rect = self.lineLayerPass.frame
         rect.size.width = CGRectGetWidth(self.passwordTextField.frame)
@@ -220,7 +220,7 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
         CATransaction.commit()
     }
     
-//    登录按钮动画
+//    MARK: - 登录按钮动画
     
     func showloginButtonAnimation() {
         CATransaction.begin()
@@ -228,10 +228,4 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
         self.loginButton.layer.borderWidth = 0.5
         CATransaction.commit()
     }
-    
-    
-    
-    
-    
-    
 }

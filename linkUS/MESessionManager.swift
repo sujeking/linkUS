@@ -17,3 +17,4 @@ class MESessionManager: NSObject {
         return Static.instance
     }
 }
+

@@ -24,6 +24,7 @@
                         <constraint firstAttribute="height" constant="35" id="ACF-sO-sAZ"/>
                         <constraint firstAttribute="width" constant="280" id="ksD-44-hpJ"/>
                     </constraints>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next"/>
                 </textField>
@@ -33,22 +34,58 @@
                         <constraint firstAttribute="width" constant="280" id="dmK-Vs-RFk"/>
                         <constraint firstAttribute="height" constant="35" id="uJz-hH-NBX"/>
                     </constraints>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9t-cz-9i1">
-                    <rect key="frame" x="57" y="424" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9t-cz-9i1">
+                    <rect key="frame" x="20" y="465" width="130" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="BAX-Zu-qxE"/>
+                        <constraint firstAttribute="width" constant="130" id="bcq-As-ceV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" red="0.99607843137254903" green="0.76078431372549016" blue="0.3843137254901961" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="linkUS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Jn-9z-sza">
+                    <rect key="frame" x="20" y="52" width="85" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome to user linkUS App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jt5-pL-bHw">
+                    <rect key="frame" x="20" y="115" width="214.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.42745098039215684" green="0.6588235294117647" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="V9t-cz-9i1" firstAttribute="leading" secondItem="i2A-qf-m9a" secondAttribute="leading" id="6Qj-sE-72H"/>
+                <constraint firstItem="7Jn-9z-sza" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="7SV-aQ-eBd"/>
                 <constraint firstItem="TBM-DW-ibT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="250" id="QTq-YF-JEi"/>
                 <constraint firstItem="i2A-qf-m9a" firstAttribute="top" secondItem="TBM-DW-ibT" secondAttribute="bottom" constant="20" id="Rf2-KO-cST"/>
                 <constraint firstItem="TBM-DW-ibT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Sik-O0-NQ9"/>
+                <constraint firstItem="Jt5-pL-bHw" firstAttribute="leading" secondItem="7Jn-9z-sza" secondAttribute="leading" id="VqA-DX-jsx"/>
                 <constraint firstItem="i2A-qf-m9a" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lXO-AL-GkU"/>
+                <constraint firstItem="Jt5-pL-bHw" firstAttribute="top" secondItem="7Jn-9z-sza" secondAttribute="bottom" constant="27" id="mlg-jK-ZPr"/>
+                <constraint firstItem="7Jn-9z-sza" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ode-9e-yqg"/>
+                <constraint firstItem="TBM-DW-ibT" firstAttribute="leading" secondItem="7Jn-9z-sza" secondAttribute="leading" id="q4N-Dh-D4h"/>
+                <constraint firstItem="V9t-cz-9i1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rgK-Tm-DzB"/>
+                <constraint firstAttribute="bottom" secondItem="V9t-cz-9i1" secondAttribute="bottom" constant="64" id="wHa-mt-L75"/>
+                <constraint firstItem="7Jn-9z-sza" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="52" id="zNe-Sb-qMQ"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="7SV-aQ-eBd"/>
+                    <exclude reference="ode-9e-yqg"/>
+                    <exclude reference="rgK-Tm-DzB"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="270" y="330"/>
         </view>
     </objects>
