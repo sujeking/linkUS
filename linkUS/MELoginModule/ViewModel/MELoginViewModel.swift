@@ -9,12 +9,14 @@
 import UIKit
 import Foundation
 
+
 class MELoginViewModel: NSObject {
     
-    func getasdasda() {
+    class func checkFullUserNameAndPassword(userNameString: String, passWordString: String) -> Bool {
+        if userNameString.characters.count > 0
+            && passWordString.characters.count > 0 {
+            return true
+        }
+        return false
         
-        let kkk = MEUserModel.xxxx(["name":"kkk"])
-        
-        print("kkkk\(kkk.userName)")
-    }
-}
+    }}

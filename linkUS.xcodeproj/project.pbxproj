@@ -12,8 +12,8 @@
 		187F40821D55C3B8005D0757 /* MEMsgViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187F40801D55C3B8005D0757 /* MEMsgViewController.xib */; };
 		187F40841D55C3D2005D0757 /* MEMsgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F40831D55C3D2005D0757 /* MEMsgModel.swift */; };
 		187F40861D55C3E2005D0757 /* MEMsgViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F40851D55C3E2005D0757 /* MEMsgViewModel.swift */; };
+		187F40881D55CC2C005D0757 /* MESessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F40871D55CC2C005D0757 /* MESessionManager.swift */; };
 		754358971D53A60100DF4CFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754358961D53A60100DF4CFC /* AppDelegate.swift */; };
-		754358991D53A60100DF4CFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754358981D53A60100DF4CFC /* ViewController.swift */; };
 		7543589C1D53A60100DF4CFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7543589A1D53A60100DF4CFC /* Main.storyboard */; };
 		7543589E1D53A60100DF4CFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7543589D1D53A60100DF4CFC /* Assets.xcassets */; };
 		754358A11D53A60100DF4CFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7543589F1D53A60100DF4CFC /* LaunchScreen.storyboard */; };
@@ -29,10 +29,10 @@
 		187F40801D55C3B8005D0757 /* MEMsgViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEMsgViewController.xib; sourceTree = "<group>"; };
 		187F40831D55C3D2005D0757 /* MEMsgModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MEMsgModel.swift; sourceTree = "<group>"; };
 		187F40851D55C3E2005D0757 /* MEMsgViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MEMsgViewModel.swift; sourceTree = "<group>"; };
+		187F40871D55CC2C005D0757 /* MESessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MESessionManager.swift; sourceTree = "<group>"; };
 		5A0947BBE6998B51B9726746 /* Pods-linkUS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-linkUS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-linkUS/Pods-linkUS.debug.xcconfig"; sourceTree = "<group>"; };
 		754358931D53A60100DF4CFC /* linkUS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = linkUS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		754358961D53A60100DF4CFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		754358981D53A60100DF4CFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7543589B1D53A60100DF4CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7543589D1D53A60100DF4CFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		754358A01D53A60100DF4CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 				754358B61D53A63B00DF4CFC /* MEServerModule */,
 				754358BA1D53A63B00DF4CFC /* MESettingModule */,
 				754358961D53A60100DF4CFC /* AppDelegate.swift */,
-				754358981D53A60100DF4CFC /* ViewController.swift */,
+				187F40871D55CC2C005D0757 /* MESessionManager.swift */,
 				7543589A1D53A60100DF4CFC /* Main.storyboard */,
 				7543589D1D53A60100DF4CFC /* Assets.xcassets */,
 				7543589F1D53A60100DF4CFC /* LaunchScreen.storyboard */,
@@ -399,8 +399,8 @@
 			files = (
 				754358C11D53A71000DF4CFC /* MELoginViewModel.swift in Sources */,
 				754358BE1D53A63B00DF4CFC /* MELoginViewController.swift in Sources */,
+				187F40881D55CC2C005D0757 /* MESessionManager.swift in Sources */,
 				187F40811D55C3B8005D0757 /* MEMsgViewController.swift in Sources */,
-				754358991D53A60100DF4CFC /* ViewController.swift in Sources */,
 				187F40861D55C3E2005D0757 /* MEMsgViewModel.swift in Sources */,
 				187F40841D55C3D2005D0757 /* MEMsgModel.swift in Sources */,
 				754358971D53A60100DF4CFC /* AppDelegate.swift in Sources */,

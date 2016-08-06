@@ -16,10 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        
         let windowFrame = UIScreen.mainScreen().bounds
         self.window = UIWindow(frame: windowFrame)
-        
         
         let loginViewController = MELoginViewController(nibName: "MELoginViewController", bundle: nil)
         self.window?.rootViewController = loginViewController

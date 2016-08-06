@@ -14,7 +14,7 @@ class MEUserModel: NSObject {
     var userToken : String?
     var userPassWord : String?
     
-    class func xxxx(dict : NSDictionary)-> MEUserModel{
+    class func initWithDict(dict : NSDictionary)-> MEUserModel{
         let model = MEUserModel()
         model.setValuesForKeysWithDictionary(dict as! [String : AnyObject])
         return model

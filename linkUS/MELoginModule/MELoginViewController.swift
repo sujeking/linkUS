@@ -17,6 +17,8 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
     var lineLayerName: CALayer!
     var lineLayerPass: CALayer!
     var lineLayerTransfer: CAShapeLayer!
+    var userModel: MEUserModel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +48,12 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
         self.view.layer.addSublayer(self.lineLayerName)
         self.view.layer.addSublayer(self.lineLayerPass)
         self.view.layer.addSublayer(self.lineLayerTransfer)
+        
+        
+        self.loginButton.layer.borderWidth = 0
+        self.loginButton.layer.borderColor = UIColor.redColor().CGColor
+        self.loginButton.layer.cornerRadius = 5
+        self.loginButton.layer.masksToBounds = true
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
@@ -57,6 +65,9 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
     func textFieldDidEndEditing(textField: UITextField) {
         if textField.isEqual(self.userNameTextField) {
             self.hiddenNameLayerAnimation()
+        }
+        if textField.isEqual(self.passwordTextField) {
+            self.hiddenPassLayerAnimation()
         }
     }
     
@@ -105,6 +116,7 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
         lineLayerTransfer.path = self.transferPath().CGPath
         lineLayerTransfer.strokeEnd = 0
     }
+    
     
 //    过度动画
     
@@ -194,11 +206,30 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
             var restRect = self.lineLayerPass.frame
             restRect.origin.x = CGRectGetMaxX(self.passwordTextField.frame)
             self.lineLayerPass.frame = restRect
-            print("动画结束 \(NSStringFromCGRect(restRect))")
+            
+            let isFull = MELoginViewModel.checkFullUserNameAndPassword(self.userNameTextField.text!, passWordString: self.passwordTextField.text!)
+            
+            if isFull {
+                self.showloginButtonAnimation()
+            } else {
+                
+            }
+            
         }
         self.lineLayerPass.frame = rect
         CATransaction.commit()
     }
+    
+//    登录按钮动画
+    
+    func showloginButtonAnimation() {
+        CATransaction.begin()
+        CATransaction.setAnimationDuration(5)
+        self.loginButton.layer.borderWidth = 0.5
+        CATransaction.commit()
+    }
+    
+    
     
     
     
