@@ -8,6 +8,10 @@
 
 import UIKit
 
+let headViewHeight: CGFloat = 244.0
+let sessionViewHeight: CGFloat = 44.0
+
+
 class MEHomeViewController: UIViewController,UITableViewDelegate,UIScrollViewDelegate {
 
     var headView:UIView!
@@ -38,7 +42,7 @@ class MEHomeViewController: UIViewController,UITableViewDelegate,UIScrollViewDel
     }
     
     func addHeadView() {
-        self.headView = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 244))
+        self.headView = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: headViewHeight))
         self.headView.backgroundColor = UIColor.brownColor()
         self.headViewCenterY = self.headView.center.y
         self.view.addSubview(self.headView)
@@ -46,7 +50,8 @@ class MEHomeViewController: UIViewController,UITableViewDelegate,UIScrollViewDel
     }
 
     func addSessionView() {
-        self.sessionView = UIView(frame: CGRect(x: 0, y: 200, width: CGRectGetWidth(UIScreen.mainScreen().bounds), height: 44))
+        self.sessionView = UIView(frame: CGRect(x: 0, y: headViewHeight - sessionViewHeight,
+            width: CGRectGetWidth(UIScreen.mainScreen().bounds), height: sessionViewHeight))
         self.sessionView.backgroundColor = UIColor.redColor()
         self.headView.addSubview(self.sessionView)
     }
@@ -57,6 +62,7 @@ class MEHomeViewController: UIViewController,UITableViewDelegate,UIScrollViewDel
             height: CGRectGetHeight(UIScreen.mainScreen().bounds)))
         self.scrollView.contentSize = CGSizeMake(3 * screenWidth, screenHeight)
         self.scrollView.showsVerticalScrollIndicator = false
+        self.scrollView.showsHorizontalScrollIndicator = false
         self.scrollView.pagingEnabled = true
         self.scrollView.delegate = self;
         self.scrollView.backgroundColor = UIColor.lightGrayColor()
@@ -69,7 +75,7 @@ class MEHomeViewController: UIViewController,UITableViewDelegate,UIScrollViewDel
         self.serviceview =  MEServiceView(frame: CGRect(x: 0, y: 0, width: screenWidth,
             height: screenHeight))
         let tableHeadView = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth,
-            height: 244))
+            height: headViewHeight))
         self.serviceview.tableview.tableHeaderView = tableHeadView
         self.serviceview.tableview.delegate = self;
         self.scrollView.addSubview(self.serviceview)
@@ -79,13 +85,12 @@ class MEHomeViewController: UIViewController,UITableViewDelegate,UIScrollViewDel
         self.needview =  MENeedView(frame: CGRect(x: screenWidth, y: 0, width: screenWidth,
             height: screenHeight))
         let tableHeadView = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth,
-            height: 244))
+            height: headViewHeight))
         self.needview.tableview.tableHeaderView = tableHeadView
         self.needview.tableview.delegate = self;
         self.scrollView.addSubview(self.needview)
 
     }
-    
     
 //    MARK: delegate
     
