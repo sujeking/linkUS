@@ -19,4 +19,5 @@ class MELoginViewModel: NSObject {
         }
         return false
         
-    }}
+    }
+}

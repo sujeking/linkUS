@@ -16,7 +16,6 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
     
     var lineLayerName: CALayer!
     var lineLayerPass: CALayer!
-    var lineLayerTransfer: CAShapeLayer!
     var userModel: MEUserModel!
     let lineColor:CGColor = UIColor.whiteColor().CGColor
     
@@ -43,11 +42,9 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
         
         self.layerName()
         self.layerPass()
-        self.layerTransfer()
         
         self.view.layer.addSublayer(self.lineLayerName)
         self.view.layer.addSublayer(self.lineLayerPass)
-        self.view.layer.addSublayer(self.lineLayerTransfer)
         
         
         self.loginButton.layer.borderWidth = 0
@@ -107,43 +104,6 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
         lineLayerPass.backgroundColor = self.lineColor
     }
     
-    func layerTransfer() {
-        lineLayerTransfer = CAShapeLayer.init()
-        let x: CGFloat     = CGRectGetMaxX(self.passwordTextField.frame)
-        let y: CGFloat     = CGRectGetMaxY(self.userNameTextField.frame) + 6
-        lineLayerTransfer.frame = CGRectMake(x, y, 30, 55)
-        lineLayerTransfer.strokeColor = self.lineColor
-        lineLayerTransfer.fillColor = nil
-        lineLayerTransfer.path = self.transferPath().CGPath
-        lineLayerTransfer.strokeEnd = 0
-    }
-    
-//    MARK: - 过度动画
-    
-    func showTransLayerAnimation() {
-        CATransaction.begin()
-        CATransaction.setAnimationDuration(0.3)
-        CATransaction.setCompletionBlock {
-            self.hiddenTransLayerAnimation()
-        }
-        
-        self.lineLayerTransfer.strokeEnd = 1
-        CATransaction.commit()
-    }
-    
-    func hiddenTransLayerAnimation() {
-        CATransaction.setAnimationDuration(0.3)
-        CATransaction.setCompletionBlock {
-            self.lineLayerTransfer.strokeStart = 0
-            self.lineLayerTransfer.strokeEnd = 0
-            
-            self.showPassLayerAnimation()
-        }
-        
-        self.lineLayerTransfer.strokeStart = 1
-        CATransaction.commit()
-    }
-    
 //    MARK: - 用户名动画
     
     func showNameLayerAnimation() {
@@ -175,7 +135,7 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
             var restRect = self.lineLayerName.frame
             restRect.origin.x = CGRectGetMinX(self.userNameTextField.frame)
             self.lineLayerName.frame = restRect
-            self.showTransLayerAnimation()
+            self.showPassLayerAnimation()
         }
         self.lineLayerName.frame = rect
         CATransaction.commit()
