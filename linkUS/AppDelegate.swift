@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let windowFrame = UIScreen.mainScreen().bounds
         self.window = UIWindow(frame: windowFrame)
         
-        let loginViewController = MELoginViewController(nibName: "MELoginViewController", bundle: nil)
+        let loginViewController = MEHomeViewController(nibName: "MEHomeViewController", bundle: nil)
         self.window?.rootViewController = loginViewController
         self.window?.makeKeyAndVisible()
         
