@@ -51,6 +51,11 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
         self.loginButton.layer.borderColor = self.lineColor
         self.loginButton.layer.cornerRadius = 5
         self.loginButton.layer.masksToBounds = true
+        
+        self.loginButton.addTarget(self, action: #selector(loginButtonClick),
+                                   forControlEvents: UIControlEvents.TouchUpInside)
+        
+        
     }
     
 //    MARK: - UITextFieldDelegate
@@ -104,7 +109,7 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
         lineLayerPass.backgroundColor = self.lineColor
     }
     
-//    MARK: - 用户名动画
+//    MARK: - 动画
     
     func showNameLayerAnimation() {
         var rect = self.lineLayerName.frame
@@ -141,7 +146,6 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
         CATransaction.commit()
     }
     
-//    MARK: - 密码动画
     func showPassLayerAnimation() {
         var rect = self.lineLayerPass.frame
         rect.size.width = CGRectGetWidth(self.passwordTextField.frame)
@@ -180,12 +184,15 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
         CATransaction.commit()
     }
     
-//    MARK: - 登录按钮动画
-    
     func showloginButtonAnimation() {
         CATransaction.begin()
         CATransaction.setAnimationDuration(5)
         self.loginButton.layer.borderWidth = 0.5
         CATransaction.commit()
+    }
+    
+//    MARK: - user Action
+    func loginButtonClick() {
+        MELoginViewModel.loginAction("", passWord: "", superViewController: self);
     }
 }
