@@ -14,6 +14,10 @@
 		187F40861D55C3E2005D0757 /* MEMsgViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F40851D55C3E2005D0757 /* MEMsgViewModel.swift */; };
 		187F40881D55CC2C005D0757 /* MESessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F40871D55CC2C005D0757 /* MESessionManager.swift */; };
 		187F408A1D55EA14005D0757 /* color.png in Resources */ = {isa = PBXBuildFile; fileRef = 187F40891D55EA14005D0757 /* color.png */; };
+		753348C71D5B732600331FFC /* MEHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753348C11D5B732600331FFC /* MEHomeViewController.swift */; };
+		753348C81D5B732600331FFC /* MEHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 753348C21D5B732600331FFC /* MEHomeViewController.xib */; };
+		753348C91D5B732600331FFC /* MEHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753348C41D5B732600331FFC /* MEHomeModel.swift */; };
+		753348CA1D5B732600331FFC /* MEHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753348C61D5B732600331FFC /* MEHomeViewModel.swift */; };
 		754358971D53A60100DF4CFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754358961D53A60100DF4CFC /* AppDelegate.swift */; };
 		7543589C1D53A60100DF4CFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7543589A1D53A60100DF4CFC /* Main.storyboard */; };
 		7543589E1D53A60100DF4CFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7543589D1D53A60100DF4CFC /* Assets.xcassets */; };
@@ -22,6 +26,9 @@
 		754358BF1D53A63B00DF4CFC /* MELoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754358AE1D53A63B00DF4CFC /* MELoginViewController.xib */; };
 		754358C11D53A71000DF4CFC /* MELoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754358C01D53A71000DF4CFC /* MELoginViewModel.swift */; };
 		754358C31D53A75800DF4CFC /* MEUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754358C21D53A75800DF4CFC /* MEUserModel.swift */; };
+		758BDC521D5B7CB90000178C /* MEServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758BDC511D5B7CB90000178C /* MEServiceView.swift */; };
+		758BDC541D5B86BD0000178C /* MEDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758BDC531D5B86BD0000178C /* MEDefine.swift */; };
+		758BDC561D5B88920000178C /* MENeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758BDC551D5B88920000178C /* MENeedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +40,10 @@
 		187F40871D55CC2C005D0757 /* MESessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MESessionManager.swift; sourceTree = "<group>"; };
 		187F40891D55EA14005D0757 /* color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color.png; sourceTree = "<group>"; };
 		5A0947BBE6998B51B9726746 /* Pods-linkUS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-linkUS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-linkUS/Pods-linkUS.debug.xcconfig"; sourceTree = "<group>"; };
+		753348C11D5B732600331FFC /* MEHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MEHomeViewController.swift; sourceTree = "<group>"; };
+		753348C21D5B732600331FFC /* MEHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEHomeViewController.xib; sourceTree = "<group>"; };
+		753348C41D5B732600331FFC /* MEHomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MEHomeModel.swift; sourceTree = "<group>"; };
+		753348C61D5B732600331FFC /* MEHomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MEHomeViewModel.swift; sourceTree = "<group>"; };
 		754358931D53A60100DF4CFC /* linkUS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = linkUS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		754358961D53A60100DF4CFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7543589B1D53A60100DF4CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +54,9 @@
 		754358AE1D53A63B00DF4CFC /* MELoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MELoginViewController.xib; sourceTree = "<group>"; };
 		754358C01D53A71000DF4CFC /* MELoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MELoginViewModel.swift; sourceTree = "<group>"; };
 		754358C21D53A75800DF4CFC /* MEUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MEUserModel.swift; sourceTree = "<group>"; };
+		758BDC511D5B7CB90000178C /* MEServiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MEServiceView.swift; sourceTree = "<group>"; };
+		758BDC531D5B86BD0000178C /* MEDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MEDefine.swift; sourceTree = "<group>"; };
+		758BDC551D5B88920000178C /* MENeedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MENeedView.swift; sourceTree = "<group>"; };
 		AAA43E92CFEBA3AAB0D06B5B /* libPods-linkUS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-linkUS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -58,6 +72,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		753348C01D5B732600331FFC /* MEHomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				753348C11D5B732600331FFC /* MEHomeViewController.swift */,
+				753348C21D5B732600331FFC /* MEHomeViewController.xib */,
+				758BDC501D5B7C8B0000178C /* Views */,
+				753348C31D5B732600331FFC /* Models */,
+				753348C51D5B732600331FFC /* ViewModel */,
+			);
+			path = MEHomeModule;
+			sourceTree = "<group>";
+		};
+		753348C31D5B732600331FFC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				753348C41D5B732600331FFC /* MEHomeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		753348C51D5B732600331FFC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				753348C61D5B732600331FFC /* MEHomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		7543588A1D53A60100DF4CFC = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +121,7 @@
 		754358951D53A60100DF4CFC /* linkUS */ = {
 			isa = PBXGroup;
 			children = (
+				753348C01D5B732600331FFC /* MEHomeModule */,
 				754358A81D53A63B00DF4CFC /* MELaunchModule */,
 				754358AC1D53A63B00DF4CFC /* MELoginModule */,
 				754358B21D53A63B00DF4CFC /* MEMsgModule */,
@@ -86,6 +129,7 @@
 				754358BA1D53A63B00DF4CFC /* MESettingModule */,
 				754358961D53A60100DF4CFC /* AppDelegate.swift */,
 				187F40871D55CC2C005D0757 /* MESessionManager.swift */,
+				758BDC531D5B86BD0000178C /* MEDefine.swift */,
 				187F40891D55EA14005D0757 /* color.png */,
 				7543589A1D53A60100DF4CFC /* Main.storyboard */,
 				7543589D1D53A60100DF4CFC /* Assets.xcassets */,
@@ -258,6 +302,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		758BDC501D5B7C8B0000178C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				758BDC511D5B7CB90000178C /* MEServiceView.swift */,
+				758BDC551D5B88920000178C /* MENeedView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		8B17B71A8E74F1D6901AF56C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +394,7 @@
 				187F408A1D55EA14005D0757 /* color.png in Resources */,
 				754358A11D53A60100DF4CFC /* LaunchScreen.storyboard in Resources */,
 				7543589E1D53A60100DF4CFC /* Assets.xcassets in Resources */,
+				753348C81D5B732600331FFC /* MEHomeViewController.xib in Resources */,
 				187F40821D55C3B8005D0757 /* MEMsgViewController.xib in Resources */,
 				7543589C1D53A60100DF4CFC /* Main.storyboard in Resources */,
 			);
@@ -403,9 +457,15 @@
 			files = (
 				754358C11D53A71000DF4CFC /* MELoginViewModel.swift in Sources */,
 				754358BE1D53A63B00DF4CFC /* MELoginViewController.swift in Sources */,
+				753348C71D5B732600331FFC /* MEHomeViewController.swift in Sources */,
+				753348CA1D5B732600331FFC /* MEHomeViewModel.swift in Sources */,
+				758BDC561D5B88920000178C /* MENeedView.swift in Sources */,
 				187F40881D55CC2C005D0757 /* MESessionManager.swift in Sources */,
 				187F40811D55C3B8005D0757 /* MEMsgViewController.swift in Sources */,
+				758BDC541D5B86BD0000178C /* MEDefine.swift in Sources */,
+				753348C91D5B732600331FFC /* MEHomeModel.swift in Sources */,
 				187F40861D55C3E2005D0757 /* MEMsgViewModel.swift in Sources */,
+				758BDC521D5B7CB90000178C /* MEServiceView.swift in Sources */,
 				187F40841D55C3D2005D0757 /* MEMsgModel.swift in Sources */,
 				754358971D53A60100DF4CFC /* AppDelegate.swift in Sources */,
 				754358C31D53A75800DF4CFC /* MEUserModel.swift in Sources */,
