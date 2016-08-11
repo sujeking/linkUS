@@ -77,6 +77,7 @@ class MEHomeViewController: UIViewController,UITableViewDelegate,UIScrollViewDel
         let tableHeadView = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth,
             height: headViewHeight))
         self.serviceview.tableview.tableHeaderView = tableHeadView
+        self.serviceview.tableview.tag = 1001
         self.serviceview.tableview.delegate = self;
         self.scrollView.addSubview(self.serviceview)
     }
@@ -87,9 +88,30 @@ class MEHomeViewController: UIViewController,UITableViewDelegate,UIScrollViewDel
         let tableHeadView = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth,
             height: headViewHeight))
         self.needview.tableview.tableHeaderView = tableHeadView
+        self.needview.tableview.tag = 1002
         self.needview.tableview.delegate = self;
         self.scrollView.addSubview(self.needview)
 
+    }
+    
+//    MARK: action
+    
+    func setTableViewContentOffSet(tag: NSInteger!, contentOffSetY: CGFloat) {
+        
+        var tableViewOffset = contentOffSetY;
+        
+        if tableViewOffset > 200 {
+            
+            tableViewOffset = 200
+        }
+        
+        if 1001 == tag {
+            self.needview.tableview.setContentOffset(CGPoint(x: 0,y: tableViewOffset) , animated: false)
+        }
+        
+        if 1002 == tag {
+            self.serviceview.tableview.setContentOffset(CGPoint(x: 0,y: tableViewOffset) , animated: false)
+        }
     }
     
 //    MARK: delegate
@@ -109,11 +131,23 @@ class MEHomeViewController: UIViewController,UITableViewDelegate,UIScrollViewDel
     }
     
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        if scrollView.isEqual(self.scrollView) {
+            return
+        }
         
+        self.setTableViewContentOffSet(scrollView.tag, contentOffSetY: scrollView.contentOffset.y)
     }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         
+        if scrollView.isEqual(self.scrollView) {
+            return
+        }
+        self.setTableViewContentOffSet(scrollView.tag, contentOffSetY: scrollView.contentOffset.y)
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView .deselectRowAtIndexPath(indexPath, animated: true)
     }
     
 }

@@ -19,6 +19,8 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
     var userModel: MEUserModel!
     let lineColor:CGColor = UIColor.whiteColor().CGColor
     
+//    MARK: - lefe
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -57,7 +59,7 @@ class MELoginViewController: UIViewController,UITextFieldDelegate {
         
         
     }
-    
+
 //    MARK: - UITextFieldDelegate
     
     func textFieldDidBeginEditing(textField: UITextField) {

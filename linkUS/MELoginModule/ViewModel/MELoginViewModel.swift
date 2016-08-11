@@ -22,7 +22,7 @@ class MELoginViewModel: NSObject {
     
     class func loginAction(userName: String, passWord:String, superViewController: MELoginViewController) {
         
-        let msgViewController = MEMsgViewController(nibName: "MEMsgViewController", bundle: nil)
+        let msgViewController = MEHomeViewController(nibName: "MEHomeViewController", bundle: nil)
         superViewController.presentViewController(msgViewController, animated: false, completion: nil)
         UIApplication.sharedApplication().keyWindow?.layer.addAnimation(self.commitTranstion(), forKey: nil)
     }
